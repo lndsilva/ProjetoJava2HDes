@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PacoteJava;
 
-/**
- *
- * @author Laercio-pc
- */
 public class Exemplo01 {
-    
+
+    //método principal
+    public static void main(String args[]) {
+
+        System.out.print("Bem vindo a nossa aula!!!");
+
+        //Executar o método da outra classe no mesmo pacote.
+        Exemplo02.mostraTexto();
+
+    }
 }
