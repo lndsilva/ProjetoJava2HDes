@@ -27,20 +27,72 @@ public class JFSpash extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblBemVindo = new javax.swing.JLabel();
+        prbSplash = new javax.swing.JProgressBar();
+        lblZeroP = new javax.swing.JLabel();
+        lblCemP = new javax.swing.JLabel();
+        lblCarregando = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 102, 102));
+        setUndecorated(true);
+        setResizable(false);
+
+        lblBemVindo.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        lblBemVindo.setText("Bem vindo ao sistema Loja ABC");
+
+        prbSplash.setValue(100);
+
+        lblZeroP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblZeroP.setText("0%");
+
+        lblCemP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblCemP.setText("100%");
+
+        lblCarregando.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblCarregando.setText("Carregando...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 154, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 173, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblBemVindo)
+                        .addGap(133, 133, 133))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblZeroP)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblCemP))
+                                .addComponent(prbSplash, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(149, 149, 149)
+                                .addComponent(lblCarregando)))
+                        .addGap(255, 255, 255))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 359, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(lblBemVindo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblZeroP)
+                    .addComponent(lblCemP))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(prbSplash, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCarregando)
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -79,5 +131,10 @@ public class JFSpash extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblBemVindo;
+    private javax.swing.JLabel lblCarregando;
+    private javax.swing.JLabel lblCemP;
+    private javax.swing.JLabel lblZeroP;
+    private javax.swing.JProgressBar prbSplash;
     // End of variables declaration//GEN-END:variables
 }
