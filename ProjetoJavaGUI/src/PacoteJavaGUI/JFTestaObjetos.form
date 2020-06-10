@@ -136,6 +136,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icone/insert.png"/>
             </Property>
+            <Property name="mnemonic" type="int" value="67"/>
             <Property name="text" type="java.lang.String" value="Cadastar"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
@@ -145,15 +146,20 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icone/back.png"/>
             </Property>
+            <Property name="mnemonic" type="int" value="86"/>
             <Property name="text" type="java.lang.String" value="Voltar"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAlterar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icone/update.png"/>
             </Property>
+            <Property name="mnemonic" type="int" value="76"/>
             <Property name="text" type="java.lang.String" value="Alterar"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
@@ -163,6 +169,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icone/delete.png"/>
             </Property>
+            <Property name="mnemonic" type="int" value="88"/>
             <Property name="text" type="java.lang.String" value="Excluir"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
@@ -172,6 +179,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icone/search.png"/>
             </Property>
+            <Property name="mnemonic" type="int" value="80"/>
             <Property name="text" type="java.lang.String" value="Pesquisar"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
@@ -255,18 +263,16 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jFormattedTextField1" min="-2" pref="190" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="txtNomeUsu4" min="-2" pref="430" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lblNomeUsu5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" pref="418" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jFormattedTextField1" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jComboBox1" min="-2" pref="418" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="31" max="32767" attributes="0"/>

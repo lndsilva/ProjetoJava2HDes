@@ -145,7 +145,7 @@ public class JFLogin extends javax.swing.JFrame {
                     "Loja PAM", JOptionPane.INFORMATION_MESSAGE);          
             //Abrir uma janela e fechar a janela atual.
            
-            JFMenuPrincipal abrir = new JFMenuPrincipal();
+            JFPrincipal abrir = new JFPrincipal();
             abrir.setVisible(true);
             this.setVisible(false);
             

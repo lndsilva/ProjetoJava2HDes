@@ -5,6 +5,8 @@
  */
 package PacoteJavaGUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Laercio-pc
@@ -88,22 +90,32 @@ public class JFTestaObjetos extends javax.swing.JFrame {
         pnlBottom.setBackground(new java.awt.Color(204, 204, 204));
 
         btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/insert.png"))); // NOI18N
+        btnCadastrar.setMnemonic('C');
         btnCadastrar.setText("Cadastar");
         btnCadastrar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/back.png"))); // NOI18N
+        btnVoltar.setMnemonic('V');
         btnVoltar.setText("Voltar");
         btnVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         btnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/update.png"))); // NOI18N
+        btnAlterar.setMnemonic('L');
         btnAlterar.setText("Alterar");
         btnAlterar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/delete.png"))); // NOI18N
+        btnExcluir.setMnemonic('X');
         btnExcluir.setText("Excluir");
         btnExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         btnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/search.png"))); // NOI18N
+        btnPesquisar.setMnemonic('P');
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
@@ -216,15 +228,14 @@ public class JFTestaObjetos extends javax.swing.JFrame {
                             .addComponent(lblNomeUsu6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
                                 .addComponent(txtNomeUsu4, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(35, 35, 35)
                                 .addComponent(lblNomeUsu5)
                                 .addGap(37, 37, 37)
-                                .addComponent(jComboBox1, 0, 418, Short.MAX_VALUE))
-                            .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
-                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         pnlInformacoesUsuarioLayout.setVerticalGroup(
@@ -355,6 +366,17 @@ public class JFTestaObjetos extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+       // JOptionPane.showMessageDialog(null, "Cliquei no voltar...","Sistema Loja ABC",JOptionPane.INFORMATION_MESSAGE);
+       //Voltando para janela Principal
+       JFPrincipal voltar = new JFPrincipal();
+       //Abrindo a janela principal
+       voltar.setVisible(true);
+       //Fechar a janela onde estou
+       this.setVisible(false);       
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
