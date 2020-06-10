@@ -39,6 +39,25 @@ public class JFTestaObjetos extends javax.swing.JFrame {
         pnlInformacoesUsuario = new javax.swing.JPanel();
         lblNomeUsu = new javax.swing.JLabel();
         txtNomeUsu = new javax.swing.JTextField();
+        lblNomeUsu1 = new javax.swing.JLabel();
+        txtNomeUsu1 = new javax.swing.JTextField();
+        lblNomeUsu2 = new javax.swing.JLabel();
+        lblNomeUsu3 = new javax.swing.JLabel();
+        txtNomeUsu3 = new javax.swing.JTextField();
+        lblNomeUsu4 = new javax.swing.JLabel();
+        txtNomeUsu4 = new javax.swing.JTextField();
+        lblNomeUsu5 = new javax.swing.JLabel();
+        lblNomeUsu6 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jPanel1 = new javax.swing.JPanel();
+        lblNomeUsu7 = new javax.swing.JLabel();
+        txtNomeUsu7 = new javax.swing.JTextField();
+        lblNomeUsu8 = new javax.swing.JLabel();
+        lblNomeUsu9 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -103,7 +122,7 @@ public class JFTestaObjetos extends javax.swing.JFrame {
                 .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlBottomLayout.setVerticalGroup(
             pnlBottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,12 +139,53 @@ public class JFTestaObjetos extends javax.swing.JFrame {
 
         pnlCenter.setBackground(new java.awt.Color(204, 204, 204));
 
-        pnlInformacoesUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, new java.awt.Color(0, 255, 102), java.awt.Color.black, java.awt.Color.lightGray));
+        pnlInformacoesUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do usuário", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24), new java.awt.Color(204, 0, 0))); // NOI18N
 
         lblNomeUsu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblNomeUsu.setText("Nome:");
 
         txtNomeUsu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lblNomeUsu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu1.setText("E-mail:");
+
+        txtNomeUsu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lblNomeUsu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu2.setText("Telefone:");
+
+        lblNomeUsu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu3.setText("Endereço:");
+
+        txtNomeUsu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lblNomeUsu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu4.setText("Bairro:");
+
+        txtNomeUsu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lblNomeUsu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu5.setText("Estado:");
+
+        lblNomeUsu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu6.setText("CEP.:");
+
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " Acre", " Alagoas", " Amapá", " Amazonas", " Bahia", " Ceará", " Distrito Federal", " Espírito Santo", " Goiás", " Maranhão", " Mato Grosso", " Mato Grosso do Sul", " Minas Gerais", " Pará", " Paraíba ", " Paraná", " Pernambuco", " Piauí", " Rio de Janeiro", " Rio Grande do Norte", " Rio Grande do Sul ", " Rondônia", " Roraima", " Santa Catarina ", " São Paulo ", " Sergipe", " Tocantins", " " }));
+
+        try {
+            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        try {
+            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout pnlInformacoesUsuarioLayout = new javax.swing.GroupLayout(pnlInformacoesUsuario);
         pnlInformacoesUsuario.setLayout(pnlInformacoesUsuarioLayout);
@@ -133,10 +193,39 @@ public class JFTestaObjetos extends javax.swing.JFrame {
             pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(lblNomeUsu)
-                .addGap(18, 18, 18)
-                .addComponent(txtNomeUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                        .addComponent(lblNomeUsu3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNomeUsu3))
+                    .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                        .addComponent(lblNomeUsu1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNomeUsu1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNomeUsu2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jFormattedTextField2))
+                    .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                        .addComponent(lblNomeUsu)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNomeUsu))
+                    .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                        .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNomeUsu4)
+                            .addComponent(lblNomeUsu6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                                .addComponent(txtNomeUsu4, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(lblNomeUsu5)
+                                .addGap(37, 37, 37)
+                                .addComponent(jComboBox1, 0, 418, Short.MAX_VALUE))
+                            .addGroup(pnlInformacoesUsuarioLayout.createSequentialGroup()
+                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         pnlInformacoesUsuarioLayout.setVerticalGroup(
             pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,7 +234,79 @@ public class JFTestaObjetos extends javax.swing.JFrame {
                 .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNomeUsu)
                     .addComponent(txtNomeUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu1)
+                    .addComponent(txtNomeUsu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNomeUsu2)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu3)
+                    .addComponent(txtNomeUsu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu4)
+                    .addComponent(txtNomeUsu4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNomeUsu5)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlInformacoesUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu6)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações de Segurança", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24), new java.awt.Color(204, 0, 0))); // NOI18N
+
+        lblNomeUsu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu7.setText("Nome do usuário:");
+
+        txtNomeUsu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lblNomeUsu8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu8.setText("Senha do usuário:");
+
+        lblNomeUsu9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNomeUsu9.setText("Repetir senha do usuário:");
+
+        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jPasswordField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNomeUsu7)
+                    .addComponent(lblNomeUsu8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtNomeUsu7)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblNomeUsu9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                .addGap(47, 47, 47))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu7)
+                    .addComponent(txtNomeUsu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNomeUsu8)
+                    .addComponent(lblNomeUsu9)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlCenterLayout = new javax.swing.GroupLayout(pnlCenter);
@@ -154,7 +315,9 @@ public class JFTestaObjetos extends javax.swing.JFrame {
             pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCenterLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(pnlInformacoesUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlInformacoesUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlCenterLayout.setVerticalGroup(
@@ -162,7 +325,9 @@ public class JFTestaObjetos extends javax.swing.JFrame {
             .addGroup(pnlCenterLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(pnlInformacoesUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,9 +337,9 @@ public class JFTestaObjetos extends javax.swing.JFrame {
             .addComponent(pnlHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlBottom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlCenter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlBottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -232,12 +397,31 @@ public class JFTestaObjetos extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JLabel lblNomeUsu;
+    private javax.swing.JLabel lblNomeUsu1;
+    private javax.swing.JLabel lblNomeUsu2;
+    private javax.swing.JLabel lblNomeUsu3;
+    private javax.swing.JLabel lblNomeUsu4;
+    private javax.swing.JLabel lblNomeUsu5;
+    private javax.swing.JLabel lblNomeUsu6;
+    private javax.swing.JLabel lblNomeUsu7;
+    private javax.swing.JLabel lblNomeUsu8;
+    private javax.swing.JLabel lblNomeUsu9;
     private javax.swing.JLabel lblSistemaLojaABC;
     private javax.swing.JPanel pnlBottom;
     private javax.swing.JPanel pnlCenter;
     private javax.swing.JPanel pnlHeader;
     private javax.swing.JPanel pnlInformacoesUsuario;
     private javax.swing.JTextField txtNomeUsu;
+    private javax.swing.JTextField txtNomeUsu1;
+    private javax.swing.JTextField txtNomeUsu3;
+    private javax.swing.JTextField txtNomeUsu4;
+    private javax.swing.JTextField txtNomeUsu7;
     // End of variables declaration//GEN-END:variables
 }
