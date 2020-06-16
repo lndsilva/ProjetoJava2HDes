@@ -130,7 +130,7 @@
           <Font name="Segoe UI" size="23" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icone/user.png"/>
+          <Image iconType="3" name="/icone/caixa_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Caixa"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -156,7 +156,7 @@
           <Font name="Segoe UI" size="23" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icone/user.png"/>
+          <Image iconType="3" name="/icone/produtos.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Gerenciar Produtos"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -169,7 +169,7 @@
           <Font name="Segoe UI" size="23" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icone/user.png"/>
+          <Image iconType="3" name="/icone/fornecedores.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Gerenciar Fornecedores"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -182,7 +182,7 @@
           <Font name="Segoe UI" size="23" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icone/user.png"/>
+          <Image iconType="3" name="/icone/relatorios.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Relat&#xf3;rios"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>

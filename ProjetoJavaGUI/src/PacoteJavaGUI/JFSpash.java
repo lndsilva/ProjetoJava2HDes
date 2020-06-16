@@ -5,6 +5,10 @@
  */
 package PacoteJavaGUI;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
+
 /**
  *
  * @author Laercio-pc
@@ -16,6 +20,10 @@ public class JFSpash extends javax.swing.JFrame {
      */
     public JFSpash() {
         initComponents();
+        
+        URL url = this.getClass().getResource("/icone/logo1.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
+        this.setIconImage(iconeTitulo);
     }
 
     /**
@@ -29,8 +37,7 @@ public class JFSpash extends javax.swing.JFrame {
 
         lblBemVindo = new javax.swing.JLabel();
         prbSplash = new javax.swing.JProgressBar();
-        lblZeroP = new javax.swing.JLabel();
-        lblCemP = new javax.swing.JLabel();
+        lblLoad = new javax.swing.JLabel();
         lblCarregando = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,13 +48,12 @@ public class JFSpash extends javax.swing.JFrame {
         lblBemVindo.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         lblBemVindo.setText("Bem vindo ao sistema Loja ABC");
 
+        prbSplash.setBackground(new java.awt.Color(0, 153, 153));
+        prbSplash.setForeground(new java.awt.Color(0, 204, 153));
         prbSplash.setValue(100);
 
-        lblZeroP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblZeroP.setText("0%");
-
-        lblCemP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblCemP.setText("100%");
+        lblLoad.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblLoad.setText("100%");
 
         lblCarregando.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblCarregando.setText("Carregando...");
@@ -57,33 +63,30 @@ public class JFSpash extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 173, Short.MAX_VALUE)
+                .addGap(0, 164, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(lblLoad)
+                            .addGap(470, 470, 470))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(prbSplash, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(149, 149, 149)
+                                    .addComponent(lblCarregando)))
+                            .addGap(255, 255, 255)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblBemVindo)
-                        .addGap(133, 133, 133))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblZeroP)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblCemP))
-                                .addComponent(prbSplash, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(149, 149, 149)
-                                .addComponent(lblCarregando)))
-                        .addGap(255, 255, 255))))
+                        .addGap(142, 142, 142))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
+                .addGap(89, 89, 89)
                 .addComponent(lblBemVindo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblZeroP)
-                    .addComponent(lblCemP))
+                .addGap(69, 69, 69)
+                .addComponent(lblLoad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(prbSplash, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -133,8 +136,7 @@ public class JFSpash extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblBemVindo;
     private javax.swing.JLabel lblCarregando;
-    private javax.swing.JLabel lblCemP;
-    private javax.swing.JLabel lblZeroP;
-    private javax.swing.JProgressBar prbSplash;
+    public javax.swing.JLabel lblLoad;
+    public javax.swing.JProgressBar prbSplash;
     // End of variables declaration//GEN-END:variables
 }

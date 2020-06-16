@@ -5,6 +5,10 @@
  */
 package PacoteJavaGUI;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
+
 /**
  *
  * @author Laercio-pc
@@ -16,6 +20,9 @@ public class JFPesquisar extends javax.swing.JFrame {
      */
     public JFPesquisar() {
         initComponents();
+         URL url = this.getClass().getResource("/icone/logo1.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
+        this.setIconImage(iconeTitulo);
     }
 
     /**

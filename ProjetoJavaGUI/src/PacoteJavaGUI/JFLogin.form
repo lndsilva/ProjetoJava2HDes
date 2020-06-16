@@ -33,7 +33,7 @@
                   <Component id="txtUsuario" alignment="0" max="32767" attributes="0"/>
                   <Component id="txtSenha" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnEntrar" pref="118" max="32767" attributes="0"/>
+                      <Component id="btnEntrar" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnSair" min="-2" pref="112" max="-2" attributes="0"/>
                   </Group>
@@ -70,7 +70,7 @@
                   </Group>
                   <Component id="imgLogo" min="-2" pref="145" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -105,7 +105,7 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PacoteJavaGUI/entrar.png"/>
+          <Image iconType="3" name="/icone/entrar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Entrar"/>
         <Property name="horizontalTextPosition" type="int" value="4"/>
@@ -120,7 +120,7 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PacoteJavaGUI/sair.png"/>
+          <Image iconType="3" name="/icone/sair.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
@@ -131,7 +131,7 @@
     <Component class="javax.swing.JLabel" name="imgLogo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PacoteJavaGUI/logo.png"/>
+          <Image iconType="3" name="/icone/logo.png"/>
         </Property>
       </Properties>
     </Component>

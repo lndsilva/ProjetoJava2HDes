@@ -5,6 +5,9 @@
  */
 package PacoteJavaGUI;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +21,9 @@ public class JFTestaObjetos extends javax.swing.JFrame {
      */
     public JFTestaObjetos() {
         initComponents();
+         URL url = this.getClass().getResource("/icone/logo1.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
+        this.setIconImage(iconeTitulo);
     }
 
     /**

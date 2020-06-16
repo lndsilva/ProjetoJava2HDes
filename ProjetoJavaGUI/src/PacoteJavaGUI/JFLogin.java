@@ -6,6 +6,9 @@
 package PacoteJavaGUI;
 
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +24,9 @@ public class JFLogin extends javax.swing.JFrame {
     public JFLogin() {
         initComponents();
         txtUsuario.grabFocus();
+         URL url = this.getClass().getResource("/icone/logo1.png");
+        Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
+        this.setIconImage(iconeTitulo);
     }
 
     /**
@@ -53,7 +59,7 @@ public class JFLogin extends javax.swing.JFrame {
         lblSenha.setText("Senha");
 
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/entrar.png"))); // NOI18N
+        btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/entrar.png"))); // NOI18N
         btnEntrar.setText("Entrar");
         btnEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +69,7 @@ public class JFLogin extends javax.swing.JFrame {
         });
 
         btnSair.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/sair.png"))); // NOI18N
+        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/sair.png"))); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +77,7 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
 
-        imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/logo.png"))); // NOI18N
+        imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/logo.png"))); // NOI18N
 
         txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
@@ -87,7 +93,7 @@ public class JFLogin extends javax.swing.JFrame {
                     .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                        .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -115,7 +121,7 @@ public class JFLogin extends javax.swing.JFrame {
                             .addComponent(btnEntrar)
                             .addComponent(btnSair)))
                     .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
