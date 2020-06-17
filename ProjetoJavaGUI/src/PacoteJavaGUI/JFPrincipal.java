@@ -75,38 +75,59 @@ public class JFPrincipal extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/empregados.png"))); // NOI18N
         jButton1.setText("Gerenciar Funcionário");
+        jButton1.setToolTipText("Funcionários");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/caixa_1.png"))); // NOI18N
         jButton2.setText("Caixa");
+        jButton2.setToolTipText("Caixa");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/user.png"))); // NOI18N
         jButton3.setText("Gerenciar Usuário");
+        jButton3.setToolTipText("Usuários");
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/produtos.png"))); // NOI18N
         jButton4.setText("Gerenciar Produtos");
+        jButton4.setToolTipText("Produtos");
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/fornecedores.png"))); // NOI18N
         jButton5.setText("Gerenciar Fornecedores");
+        jButton5.setToolTipText("Fornecedores");
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 23)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/relatorios.png"))); // NOI18N
         jButton6.setText("Relatórios");
+        jButton6.setToolTipText("Relatórios");
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/voltar.png"))); // NOI18N
@@ -169,6 +190,24 @@ public class JFPrincipal extends javax.swing.JFrame {
         voltar.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JFCadastroUsuario abrir = new JFCadastroUsuario();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        JFCaixa abrir = new JFCaixa();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

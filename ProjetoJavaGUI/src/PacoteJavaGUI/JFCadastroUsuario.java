@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author Laercio-pc
  */
-public class JFTestaObjetos extends javax.swing.JFrame {
+public class JFCadastroUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form JFTestaObjetos
      */
-    public JFTestaObjetos() {
+    public JFCadastroUsuario() {
         initComponents();
          URL url = this.getClass().getResource("/icone/logo1.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
@@ -401,20 +401,21 @@ public class JFTestaObjetos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFTestaObjetos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFTestaObjetos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFTestaObjetos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFTestaObjetos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFTestaObjetos().setVisible(true);
+                new JFCadastroUsuario().setVisible(true);
             }
         });
     }
