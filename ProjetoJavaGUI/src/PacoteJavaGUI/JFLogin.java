@@ -9,7 +9,9 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
+import javafx.scene.paint.Color;
 import javax.swing.JOptionPane;
+import java.awt.color.*;
 
 /**
  *
@@ -23,10 +25,17 @@ public class JFLogin extends javax.swing.JFrame {
      */
     public JFLogin() {
         initComponents();
-        txtUsuario.grabFocus();
-         URL url = this.getClass().getResource("/icone/logo1.png");
+        
+        URL url = this.getClass().getResource("/icone/logo1.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
         this.setIconImage(iconeTitulo);
+        
+        txtUsuario.grabFocus();
+        lblUsuarioObrigatorio.setVisible(false);
+        lblSenhaObrigatorio.setVisible(false);
+        
+        //Mudar o fundo pelo construtor
+        //lblMensagem.setForeground(java.awt.Color.BLUE);
     }
 
     /**
@@ -45,6 +54,8 @@ public class JFLogin extends javax.swing.JFrame {
         btnSair = new javax.swing.JButton();
         imgLogo = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
+        lblUsuarioObrigatorio = new javax.swing.JLabel();
+        lblSenhaObrigatorio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Loja - PAM");
@@ -54,6 +65,11 @@ public class JFLogin extends javax.swing.JFrame {
         lblUsuario.setText("Usuário");
 
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUsuarioKeyPressed(evt);
+            }
+        });
 
         lblSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblSenha.setText("Senha");
@@ -80,6 +96,15 @@ public class JFLogin extends javax.swing.JFrame {
         imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/logo.png"))); // NOI18N
 
         txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtSenhaKeyPressed(evt);
+            }
+        });
+
+        lblUsuarioObrigatorio.setText("campo obrigatório");
+
+        lblSenhaObrigatorio.setText("campo obrigatório");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,34 +114,45 @@ public class JFLogin extends javax.swing.JFrame {
                 .addGap(81, 81, 81)
                 .addComponent(imgLogo)
                 .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSenha, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsuario, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(68, 68, 68))
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblUsuario, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(68, 68, 68))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblUsuarioObrigatorio)
+                            .addComponent(lblSenhaObrigatorio))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(35, 35, 35)
                 .addComponent(lblUsuario)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
+                        .addGap(2, 2, 2)
+                        .addComponent(lblUsuarioObrigatorio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblSenha)
                         .addGap(11, 11, 11)
                         .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
+                        .addGap(4, 4, 4)
+                        .addComponent(lblSenhaObrigatorio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnEntrar)
                             .addComponent(btnSair)))
@@ -139,29 +175,51 @@ public class JFLogin extends javax.swing.JFrame {
         txtSenha.setText("");
         txtUsuario.grabFocus();
     }
-    
+
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        
+
         String usuario = txtUsuario.getText();
         String senha = txtSenha.getText();
-        
-        if (usuario.equals("etecia") && senha.equals("etecia")) {
-            JOptionPane.showMessageDialog(null, "Bem vindo ao Sistema...",
-                    "Loja PAM", JOptionPane.INFORMATION_MESSAGE);          
-            //Abrir uma janela e fechar a janela atual.
-           
-            JFPrincipal abrir = new JFPrincipal();
-            abrir.setVisible(true);
-            this.setVisible(false);
-            
+
+        if (txtUsuario.getText().isEmpty()) {
+            lblUsuarioObrigatorio.setVisible(true);
+            lblUsuarioObrigatorio.setForeground(java.awt.Color.RED);
+            txtUsuario.grabFocus();
+        }
+        if (txtSenha.getText().isEmpty()) {
+            lblSenhaObrigatorio.setVisible(true);
+            lblSenhaObrigatorio.setForeground(java.awt.Color.RED);
+            txtSenha.grabFocus();
         } else {
-            JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos...",
-                    "Loja PAM", JOptionPane.ERROR_MESSAGE);
-            limparCampos();
+
+            if (usuario.equals("etecia") && senha.equals("etecia")) {
+                JOptionPane.showMessageDialog(null, "Bem vindo ao Sistema...",
+                        "Loja PAM", JOptionPane.INFORMATION_MESSAGE);
+                //Abrir uma janela e fechar a janela atual.
+
+                JFPrincipal abrir = new JFPrincipal();
+                abrir.setVisible(true);
+                this.setVisible(false);
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos...",
+                        "Loja PAM", JOptionPane.ERROR_MESSAGE);
+                limparCampos();
+            }
         }
 
     }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void txtUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyPressed
+        // TODO add your handling code here:
+        lblUsuarioObrigatorio.setVisible(false);
+    }//GEN-LAST:event_txtUsuarioKeyPressed
+
+    private void txtSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSenhaKeyPressed
+        // TODO add your handling code here:
+        lblSenhaObrigatorio.setVisible(false);
+    }//GEN-LAST:event_txtSenhaKeyPressed
 
     /**
      * @param args the command line arguments
@@ -203,7 +261,9 @@ public class JFLogin extends javax.swing.JFrame {
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel imgLogo;
     private javax.swing.JLabel lblSenha;
+    public javax.swing.JLabel lblSenhaObrigatorio;
     private javax.swing.JLabel lblUsuario;
+    public javax.swing.JLabel lblUsuarioObrigatorio;
     private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
