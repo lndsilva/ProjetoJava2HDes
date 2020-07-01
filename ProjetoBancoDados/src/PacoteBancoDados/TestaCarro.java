@@ -13,13 +13,36 @@ public class TestaCarro {
         
         CarroDAO carroDAO = new CarroDAO(con);
         
-        carroBean.setPlaca("JHA3592");
-        carroBean.setCor("Preto");
-        carroBean.setDescricao("Gol");
+        carroBean.setPlaca("NHD8971");
+        carroBean.setCor("Vermelho");
+        carroBean.setDescricao("Honda");
         
-        String resultado = carroDAO.inserir(carroBean);
+       //inserir
+        //String resultado = carroDAO.inserir(carroBean);
+        //System.out.println(resultado);
         
-        System.out.println(resultado);
+        //Alterar
+       // System.out.println(carroDAO.alterar(carroBean));
+       
+       //Excluir
+       //System.out.println(carroDAO.excluir(carroBean));
+       
+       //Consultar / Pesquisar
+       
+       List<CarroBean> lista = carroDAO.listarTodos();
+       
+        if (lista != null) {
+            
+            for(CarroBean carro : lista){
+                System.out.println("Placa: "+carro.getPlaca());
+                System.out.println("Cor: "+carro.getCor());
+                System.out.println("Descrição: "+carro.getDescricao());
+                System.out.println("\n");
+            }
+            
+        }
+       
+       
         
         
         
