@@ -112,6 +112,8 @@ public class CarroDAO {
                     cb.setPlaca(rs.getString(1));
                     cb.setCor(rs.getString(2));
                     cb.setDescricao(rs.getString(3));
+                    
+                    //adicionando valores na lista
                     listaCarro.add(cb);
 
                 }
