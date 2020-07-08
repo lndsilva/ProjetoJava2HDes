@@ -5,10 +5,11 @@
  */
 package PacoteBancoDados;
 
-/**
- *
- * @author Laercio-pc
- */
+import java.sql.*;
+import java.util.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class JFCarro extends javax.swing.JFrame {
 
     /**
@@ -16,6 +17,7 @@ public class JFCarro extends javax.swing.JFrame {
      */
     public JFCarro() {
         initComponents();
+        txtPlaca.grabFocus();
     }
 
     /**
@@ -74,21 +76,51 @@ public class JFCarro extends javax.swing.JFrame {
 
         btnLimpar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnLimpar.setText("Limpar");
+        btnLimpar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLimparMouseClicked(evt);
+            }
+        });
 
         btnIncluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnIncluir.setText("Incluir");
+        btnIncluir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnIncluirMouseClicked(evt);
+            }
+        });
 
         btnAlterar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnAlterar.setText("Alterar");
+        btnAlterar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAlterarMouseClicked(evt);
+            }
+        });
 
         btnExcluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnExcluir.setText("Excluir");
+        btnExcluir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExcluirMouseClicked(evt);
+            }
+        });
 
         btnPesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnPesquisar.setText("Pesquisar");
+        btnPesquisar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPesquisarMouseClicked(evt);
+            }
+        });
 
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnFechar.setText("Fechar");
+        btnFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFecharMouseClicked(evt);
+            }
+        });
 
         lblMensagem.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblMensagem.setText("Mensagem");
@@ -121,28 +153,31 @@ public class JFCarro extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPlaca, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCor, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblDescricao, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
-                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCor, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMensagem)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(22, 22, 22)
                         .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPlaca, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblCor, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblDescricao, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblMensagem, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCor, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12))
         );
         jPanel2Layout.setVerticalGroup(
@@ -160,9 +195,9 @@ public class JFCarro extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDescricao)
                     .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(lblMensagem)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,16 +216,16 @@ public class JFCarro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(267, 267, 267)
+                .addGap(266, 266, 266)
                 .addComponent(lblCadastramentoVeiculos)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(23, 23, 23)
                 .addComponent(lblCadastramentoVeiculos)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -212,6 +247,123 @@ public class JFCarro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFecharMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnFecharMouseClicked
+
+    private void btnLimparMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimparMouseClicked
+        // TODO add your handling code here:
+        txtPlaca.setText("");
+        txtCor.setText("");
+        txtDescricao.setText("");
+
+        DefaultTableModel dtm = (DefaultTableModel) tblCarro.getModel();
+        
+        for (int i = dtm.getRowCount()-1; i >=0 ; i--) {
+            dtm.removeRow(i);
+        }        
+        
+        txtPlaca.grabFocus();
+    }//GEN-LAST:event_btnLimparMouseClicked
+
+    private void btnIncluirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIncluirMouseClicked
+        // TODO add your handling code here:
+        Connection con = Conexao.abrirConexao();
+        
+        CarroBean cb = new CarroBean();
+        CarroDAO cd = new CarroDAO(con);
+        
+        cb.setPlaca(txtPlaca.getText());
+        cb.setCor(txtCor.getText());
+        cb.setDescricao(txtDescricao.getText());
+        
+               
+        lblMensagem.setText(cd.inserir(cb));
+        
+        Conexao.fecharConexao(con);
+        
+        
+
+    }//GEN-LAST:event_btnIncluirMouseClicked
+
+    private void btnPesquisarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisarMouseClicked
+        // TODO add your handling code here:
+        
+        Connection con = Conexao.abrirConexao();
+        
+        CarroDAO cd = new CarroDAO(con);
+        
+        List<CarroBean> listaCarro = new ArrayList<CarroBean>();
+        
+        listaCarro = cd.listarTodos();
+        
+        DefaultTableModel tdm = (DefaultTableModel) tblCarro.getModel();
+        
+        for (int i = tdm.getRowCount()-1 ; i >=0; i--) {
+            tdm.removeRow(i);
+        }
+        int i = 0;
+        
+        for (CarroBean cb: listaCarro) {
+            tdm.addRow(new String[1]);
+            tblCarro.setValueAt(cb.getPlaca(), i, 0);
+            tblCarro.setValueAt(cb.getCor(), i, 1);
+            tblCarro.setValueAt(cb.getDescricao(), i, 2);
+            
+            i++;
+        }
+        Conexao.fecharConexao(con);
+    }//GEN-LAST:event_btnPesquisarMouseClicked
+
+    private void btnAlterarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAlterarMouseClicked
+        // TODO add your handling code here:
+        Connection con = Conexao.abrirConexao();
+        
+        CarroBean cb = new CarroBean();
+        CarroDAO cd = new CarroDAO(con);
+        
+        cb.setPlaca(txtPlaca.getText());
+        cb.setCor(txtCor.getText());
+        cb.setDescricao(txtDescricao.getText());
+        
+        lblMensagem.setText(cd.alterar(cb));
+        
+        Conexao.fecharConexao(con);
+        
+        
+    }//GEN-LAST:event_btnAlterarMouseClicked
+
+    private void btnExcluirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExcluirMouseClicked
+        // TODO add your handling code here:
+        
+        Connection con = Conexao.abrirConexao();
+        
+        CarroBean cb = new CarroBean();
+        CarroDAO cd = new CarroDAO(con);
+        
+        cb.setPlaca(txtPlaca.getText());
+        
+        Object [] opcoes = {"Sim","Não"};
+        
+        int valor = JOptionPane.showOptionDialog(null, 
+                "Deseja excluir esse veículo: "+txtPlaca.getText()+"?",
+                "Exclusão",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                opcoes,
+                opcoes[0]);
+        
+        if (valor == JOptionPane.YES_OPTION) {
+            lblMensagem.setText(cd.excluir(cb));
+        }
+        
+        Conexao.fecharConexao(con);
+        
+        
+    }//GEN-LAST:event_btnExcluirMouseClicked
 
     /**
      * @param args the command line arguments
