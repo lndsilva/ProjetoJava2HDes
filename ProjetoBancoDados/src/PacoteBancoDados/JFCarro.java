@@ -85,6 +85,11 @@ public class JFCarro extends javax.swing.JFrame {
                 btnLimparMouseClicked(evt);
             }
         });
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
 
         btnIncluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnIncluir.setText("Incluir");
@@ -117,12 +122,17 @@ public class JFCarro extends javax.swing.JFrame {
                 btnPesquisarMouseClicked(evt);
             }
         });
+        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPesquisarActionPerformed(evt);
+            }
+        });
 
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnFechar.setText("Fechar");
-        btnFechar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnFecharMouseClicked(evt);
+        btnFechar.setText("Voltar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
             }
         });
 
@@ -280,11 +290,6 @@ public class JFCarro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnFecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFecharMouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_btnFecharMouseClicked
 
     private void btnLimparMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimparMouseClicked
         // TODO add your handling code here:
@@ -465,6 +470,21 @@ public class JFCarro extends javax.swing.JFrame {
                     "Executar", -1);
         }
     }//GEN-LAST:event_btnExecutarMouseClicked
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        // TODO add your handling code here:
+        JFMenu menu = new JFMenu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPesquisarActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     /**
      * @param args the command line arguments
